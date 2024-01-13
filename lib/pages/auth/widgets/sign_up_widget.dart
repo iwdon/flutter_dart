@@ -145,7 +145,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
                     );
                   },
                   loaded: (data) async {
-                    AuthLocalDatasource().saveAuthData(data);
+                    await AuthLocalDatasource().saveAuthData(data);
                     Navigator.pushAndRemoveUntil(context,
                         MaterialPageRoute(builder: (context) {
                       return DashboardPage();
